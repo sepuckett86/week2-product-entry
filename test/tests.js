@@ -15,7 +15,7 @@ test('get form data', (assert) => {
     formData.set('name', expected.name);
     formData.set('price', expected.price);
     formData.set('description', expected.description);
-    formData.set('family', expected.family);
+    formData.set('instrument-family', expected.family);
     formData.set('accessory', expected.accessories[0]);
     formData.append('accessory', expected.accessories[1]);
     formData.set('condition', expected.condition);
