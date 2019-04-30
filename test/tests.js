@@ -5,7 +5,7 @@ test('get form data', (assert) => {
     //Arrange
     const expected = {
         name: 'clarinet',
-        price: 2000,
+        price: '2000',
         description: 'Professional clarinet made in France',
         family: 'woodwind',
         accessories: ['reeds', 'neckstrap'],

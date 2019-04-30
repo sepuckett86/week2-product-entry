@@ -1,9 +1,9 @@
 function getProductFormData(formData) {
     const instrument = {
         name: formData.get('name'),
-        price: parseInt(formData.get('price')),
+        price: formData.get('price'),
         description: formData.get('description'),
-        family: formData.get('family'),
+        family: formData.get('instrument-family'),
         accessories: formData.getAll('accessory'),
         condition: formData.get('condition')
     };
