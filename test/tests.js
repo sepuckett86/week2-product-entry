@@ -28,3 +28,15 @@ test('get form data', (assert) => {
     //Assess
     assert.deepEqual(actual, expected);
 });
+
+test('round trip of instrument data', assert => {
+    // Arrange
+    const expected {
+        name: 'Clarinet'
+    };
+    // Act
+    instrumentApi.set(expected);
+    const actual = instrumentApi.get();
+    // Assert
+    assert(actual, expected);
+});
