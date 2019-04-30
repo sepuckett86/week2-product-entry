@@ -16,21 +16,21 @@
             <section>
                 <div>
                     <label for="name">Name: </label>
-                    <input id="name" type="text" name="name">
+                    <input id="name" type="text" name="name" required>
                 </div>
                 <div>
                     <label for="price">Price: </label>
-                    <input id="price" type="number" name="price">
+                    <input id="price" type="number" name="price" required>
                 </div>
                 <div>
                     <label for="description">Description: </label>
-                    <textarea id="description" name="description"></textarea>
+                    <textarea id="description" name="description" required></textarea>
                 </div>
             </section>
             <section>
                 <label for="instrument-family">Family: </label>
-                <select id="instrument-family" name="instrument-family">
-                    <option name="" hidden disabled selected>Please choose a family</option>
+                <select id="instrument-family" name="instrument-family" required>
+                    <option name="" value="" hidden disabled selected>Please choose a family</option>
                     <option name="woodwind">Woodwind</option>
                     <option name="brass">Brass</option>
                     <option name="percussion">Percussion</option>
@@ -64,9 +64,9 @@
                         Condition
                     </legend>
                     <label for="new">New</label>
-                    <input type="radio" name="condition" id="new" value="new">
+                    <input type="radio" name="condition" id="new" value="new" required>
                     <label for="used">Used</label>
-                    <input type="radio" name="condition" id="used" value="used">
+                    <input type="radio" name="condition" id="used" value="used" required>
                 </fieldset>
             </section>
             <section>
