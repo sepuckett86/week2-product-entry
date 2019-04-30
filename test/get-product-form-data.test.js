@@ -1,6 +1,7 @@
 import getProductFormData from '../src/get-product-form-data.js';
 
 const test = QUnit.test;
+
 QUnit.module('get-product-form-data');
 
 test('get form data', (assert) => {
