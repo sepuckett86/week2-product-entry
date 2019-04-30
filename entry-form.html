@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instrument Entry Form</title>
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
     <h1>Instruments 'R Us</h1>
     <form>
         <h2>Instrument Entry Form</h2>
-        <div>
-            <label for="name">Name: </label>
-            <input id="name" type="text" name="name">
-        </div>
-        <div>
-            <label for="price">Price: </label>
-            <input id="price" type="number" name="number">
-        </div>
-        <div>
-            <label for="description">Description: </label>
-            <textarea id="description" name="description"></textarea>
-        </div>
         <section>
+            <div>
+                <label for="name">Name: </label>
+                <input id="name" type="text" name="name">
+            </div>
+            <div>
+                <label for="price">Price: </label>
+                <input id="price" type="number" name="number">
+            </div>
+            <div>
+                <label for="description">Description: </label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+        </section>
+        <section>
+            <label for="instrument-family">Family: </label>
             <select id="instrument-family">
-                <option name="" hidden disabled selected>Please choose a type</option>
+                <option name="" hidden disabled selected>Please choose a family</option>
                 <option name="woodwind">Woodwind</option>
                 <option name="brass">Brass</option>
                 <option name="percussion">Percussion</option>
@@ -32,7 +36,36 @@
             </select>
         </section>
         <section>
-            <label for=""></label>
+            <fieldset>
+                <legend>Accessories</legend>
+                <div>
+                    <input name="accessory" type="checkbox" value="reeds" id="reeds">
+                    <label for="reeds">Reeds</label>
+                </div>
+                <div>
+                    <input name="accessory" type="checkbox" value="valve-oil" id="valve-oil">
+                    <label for="valve-oil">Valve Oil</label>
+                </div>
+                <div>    
+                    <input name="accessory" type="checkbox" value="neckstrap" id="neckstrap">
+                    <label for="neckstrap">Neckstrap</label>
+                </div>
+                <div>
+                    <input name="accessory" type="checkbox" value="mute" id="mute">
+                    <label for="mute">Mute</label>
+                </div>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>
+                    Condition
+                </legend>
+                <label for="new">New</label>
+                <input type="radio" name="condition" id="new" value="new">
+                <label for="used">Used</label>
+                <input type="radio" name="condition" id="used" value="used">
+            </fieldset>
         </section>
     </form>
 </body>

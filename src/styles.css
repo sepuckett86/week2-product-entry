@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto');
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    margin-top: 25px;
+}
+
+section div {
+    margin-top: 10px;
+}
+
+h1, h2 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+select, input, textarea {
+    font-size: 16px;
+}
