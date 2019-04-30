@@ -17,6 +17,6 @@ h1, h2 {
     font-family: 'Abril Fatface', cursive;
 }
 
-select, input, textarea {
+select, input, textarea, button {
     font-size: 16px;
 }
