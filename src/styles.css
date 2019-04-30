@@ -3,6 +3,16 @@
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    background-image: url('../assets/clarinet.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 15px;
+    padding: 4%;
+    margin: 2%;
 }
 
 section {
@@ -19,4 +29,9 @@ h1, h2 {
 
 select, input, textarea, button {
     font-size: 16px;
+}
+
+img {
+    display: block;
+    margin: 0px auto;
 }
