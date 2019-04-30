@@ -1,16 +1,5 @@
+import getProductFormData from '../src/get-product-form-data.js';
 const test = QUnit.test;
-
-function getProductFormData(formData) {
-    const instrument = {
-        name: formData.get('name'),
-        price: parseInt(formData.get('price')),
-        description: formData.get('description'),
-        family: formData.get('family'),
-        accessories: formData.getAll('accessory'),
-        condition: formData.get('condition')
-    };
-    return instrument;
-};
 
 test('get form data', (assert) => {
     //Arrange
