@@ -29,14 +29,26 @@ test('get form data', (assert) => {
     assert.deepEqual(actual, expected);
 });
 
+const instrumentApi = {
+    set(instrumentData) {
+        const json = JSON.stringify(instrumentData);
+        localStorage.setItem('instrument', json);
+    },
+    get() {
+        const json = localStorage.getItem('instrument');
+        const instrument = JSON.parse(json);
+        return instrument;
+    }
+};
+
 test('round trip of instrument data', assert => {
     // Arrange
-    const expected {
-        name: 'Clarinet'
+    const expected = {
+        testing: 'test'
     };
     // Act
     instrumentApi.set(expected);
     const actual = instrumentApi.get();
     // Assert
-    assert(actual, expected);
+    assert.deepEqual(actual, expected);
 });
