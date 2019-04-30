@@ -9,7 +9,8 @@ test('get form data', (assert) => {
         description: 'Professional clarinet made in France',
         family: 'woodwind',
         accessories: ['reeds', 'neckstrap'],
-        condition: 'new'
+        condition: 'new',
+        quality: '10'
     };
     const formData = new FormData;
     formData.set('name', expected.name);
@@ -19,6 +20,7 @@ test('get form data', (assert) => {
     formData.set('accessory', expected.accessories[0]);
     formData.append('accessory', expected.accessories[1]);
     formData.set('condition', expected.condition);
+    formData.set('quality', '10');
 
     //Act
     const actual = getProductFormData(formData);

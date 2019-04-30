@@ -5,7 +5,8 @@ function getProductFormData(formData) {
         description: formData.get('description'),
         family: formData.get('instrument-family'),
         accessories: formData.getAll('accessory'),
-        condition: formData.get('condition')
+        condition: formData.get('condition'),
+        quality: formData.get('quality')
     };
     return instrument;
 }
