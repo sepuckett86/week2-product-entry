@@ -17,7 +17,7 @@ test('round trip of instrument data', assert => {
     assert.deepEqual(actual, expected);
 });
 
-test('return an empty array if there are no instruments in local storage', () => {
+test('return an empty array if there are no instruments in local storage', (assert) => {
     localStorage.removeItem('instrument');
     // Arrange
     const expected = [];

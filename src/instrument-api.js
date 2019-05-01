@@ -7,6 +7,14 @@ const instrumentApi = {
         const json = localStorage.getItem('instrument');
         const instrument = JSON.parse(json);
         return instrument;
+    },
+    getAll() {
+        const json = localStorage.getItem('instruments');
+        const instruments = JSON.parse(json);
+        if(!instruments) {
+            return [];
+        }
+        return instruments;
     }
 };
 
