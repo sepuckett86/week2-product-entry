@@ -12,6 +12,7 @@ form.addEventListener('submit', (event) => {
     const formData = new FormData(form);
     const data = getProductFormData(formData);
     instrumentApi.set(data);
+    window.location = './';
 });
 
 slider.addEventListener('change', () => {
