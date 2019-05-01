@@ -4,8 +4,11 @@ const test = QUnit.test;
 
 QUnit.module('instrument-api');
 
+instrumentApi.storage = sessionStorage;
+const testStorage = sessionStorage;
+
 test('round trip of instrument data', assert => {
-    localStorage.removeItem('instrument');
+    testStorage.removeItem('instruments');
     // Arrange
     const expected = {
         testing: 'test'
@@ -18,7 +21,7 @@ test('round trip of instrument data', assert => {
 });
 
 test('return an empty array if there are no instruments in local storage', (assert) => {
-    localStorage.removeItem('instruments');
+    testStorage.removeItem('instruments');
     // Arrange
     const expected = [];
     // Act
@@ -28,7 +31,7 @@ test('return an empty array if there are no instruments in local storage', (asse
 });
 
 test('return whole array of instrument data with two members', assert => {
-    localStorage.removeItem('instruments');
+    testStorage.removeItem('instruments');
     // Arrange
     const instrument1 = { name: 'clarinet' };
     const instrument2 = { name: 'trombone' };
