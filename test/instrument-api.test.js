@@ -5,6 +5,7 @@ const test = QUnit.test;
 QUnit.module('instrument-api');
 
 test('round trip of instrument data', assert => {
+    localStorage.removeItem('instrument');
     // Arrange
     const expected = {
         testing: 'test'
@@ -12,6 +13,16 @@ test('round trip of instrument data', assert => {
     // Act
     instrumentApi.set(expected);
     const actual = instrumentApi.get();
+    // Assert
+    assert.deepEqual(actual, expected);
+});
+
+test('return an empty array if there are no instruments in local storage', () => {
+    localStorage.removeItem('instrument');
+    // Arrange
+    const expected = [];
+    // Act
+    const actual = instrumentApi.getAll();
     // Assert
     assert.deepEqual(actual, expected);
 });
