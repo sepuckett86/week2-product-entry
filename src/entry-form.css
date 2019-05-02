@@ -5,3 +5,8 @@ select, input, textarea, button {
 div {
     margin-top: 10px;
 }
+
+main {
+    margin: 2% auto;
+    max-width: 400px;
+}

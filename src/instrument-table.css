@@ -19,7 +19,11 @@ td {
     border-left: rgba(0, 0, 0, 0.878) 1px solid;
 }
 
-
 tr:nth-child(even) {
     background: rgba(223, 223, 223, 0.9);
+}
+
+main {
+    margin: 2% auto;
+    max-width: 600px;
 }
