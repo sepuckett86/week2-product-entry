@@ -1,0 +1,13 @@
+dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    text-align: left;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+dt, dd {
+    display: inline-block;
+    padding: 2%;
+}
