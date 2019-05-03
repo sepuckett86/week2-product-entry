@@ -27,3 +27,7 @@ main {
     margin: 2% auto;
     max-width: 600px;
 }
+
+.border-around {
+    border: rgba(0, 0, 0, 0.878) 1px solid;
+}
