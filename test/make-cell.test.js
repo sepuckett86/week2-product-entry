@@ -7,7 +7,7 @@ QUnit.module('make-cell');
 test('makeNameCell returns a td with link', assert => {
     // Arrange
     const name = 'clarinet';
-    const expected = '<td><a href="./product-detail.html?name=clarinet">clarinet</a></td>'
+    const expected = '<td><a href="./product-detail.html?name=clarinet">clarinet</a></td>';
     // Act
     const nameCell = makeCell.makeNameCell(name);
     const actual = nameCell.outerHTML;
