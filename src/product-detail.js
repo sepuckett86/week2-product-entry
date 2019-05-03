@@ -8,10 +8,13 @@ const accessory = document.getElementById('accessory');
 const condition = document.getElementById('condition');
 const quality = document.getElementById('quality');
 
-const instrumentData = instrumentApi.get();
+// get instrument name from URL
+const searchParams = new URLSearchParams(window.location.search);
+const instrumentName = searchParams.get('name');
+const instrumentData = instrumentApi.get(instrumentName);
 
-if(!instrumentData.name) {
-    window.location = './';
+if(!instrumentData) {
+    //window.location = './';
 }
 
 name.textContent = instrumentData.name;

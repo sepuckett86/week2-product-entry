@@ -10,7 +10,7 @@ for(let i = 0; i < instruments.length; i++) {
 
     const nameCell = document.createElement('td');
     const link = document.createElement('a');
-    const searchParams = new URLSearchParams;
+    const searchParams = new URLSearchParams();
     searchParams.set('name', instrument.name);
     link.href = './product-detail.html?' + searchParams;
     link.textContent = instrument.name;
