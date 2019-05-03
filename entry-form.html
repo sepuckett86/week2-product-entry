@@ -15,23 +15,23 @@
         <form id='instrument-form'>
             <h2>Instrument Entry Form</h2>
             <section>
-                <div>
+                <div class="top-space">
                     <label for="name">Name: </label>
                     <input id="name" type="text" name="name" required>
                 </div>
-                <div>
+                <div class="top-space">
                     <label for="price">Price: $</label>
                     <input id="price" type="number" name="price" required>
                 </div>
-                <div>
-                    <label for="description">Description: </label>
-                    <textarea id="description" name="description" required></textarea>
+                <div class="top-space">
+                    <label for="description">Describe what is unique about this instrument: </label>
+                    <textarea id="description" class="top-space" name="description" required></textarea>
                 </div>
             </section>
             <section>
-                <label for="instrument-family">Family: </label>
+                <label for="instrument-family">Type: </label>
                 <select id="instrument-family" name="instrument-family" required>
-                    <option name="" value="" hidden disabled selected>Please choose a family</option>
+                    <option name="" value="" hidden disabled selected>Please choose a type</option>
                     <option name="woodwind">Woodwind</option>
                     <option name="brass">Brass</option>
                     <option name="percussion">Percussion</option>
@@ -39,20 +39,25 @@
                     <option name="other">Other</option>
                 </select>
             </section>
-            <section>
+            <section id="accessories">
                 <fieldset>
                     <legend>Accessories</legend>
-                        <input name="accessory" type="checkbox" value="reeds" id="reeds">
-                        <label for="reeds">Reeds</label>
-                   
-                        <input name="accessory" type="checkbox" value="valve-oil" id="valve-oil">
-                        <label for="valve-oil">Valve Oil</label>
-                       
-                        <input name="accessory" type="checkbox" value="neckstrap" id="neckstrap">
-                        <label for="neckstrap">Neckstrap</label>
-                    
-                        <input name="accessory" type="checkbox" value="mute" id="mute">
-                        <label for="mute">Mute</label>
+                        <div class="top-space">
+                            <input name="accessory" type="checkbox" value="reeds" id="reeds">
+                            <label for="reeds">Reeds</label>
+                        </div>
+                        <div class="top-space">
+                            <input name="accessory" type="checkbox" value="valve-oil" id="valve-oil">
+                            <label for="valve-oil">Valve Oil</label>
+                        </div>
+                        <div class="top-space">
+                            <input name="accessory" type="checkbox" value="neckstrap" id="neckstrap">
+                            <label for="neckstrap">Neckstrap</label>
+                        </div>
+                        <div class="top-space">
+                            <input name="accessory" type="checkbox" value="mute" id="mute">
+                            <label for="mute">Mute</label>
+                        </div>
                 </fieldset>
             </section>
             <section>

@@ -2,7 +2,7 @@ select, input, textarea {
     font-size: 16px;
 }
 
-div {
+.top-space {
     margin-top: 10px;
 }
 
