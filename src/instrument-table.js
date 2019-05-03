@@ -8,13 +8,7 @@ for(let i = 0; i < instruments.length; i++) {
     const instrument = instruments[i];
     const tr = document.createElement('tr');
 
-    const nameCell = document.createElement('td');
-    const link = document.createElement('a');
-    const searchParams = new URLSearchParams();
-    searchParams.set('name', instrument.name);
-    link.href = './product-detail.html?' + searchParams;
-    link.textContent = instrument.name;
-    nameCell.appendChild(link);
+    const nameCell = makeNameCell(instrument);
     tr.appendChild(nameCell);
 
     const priceCell = document.createElement('td');
@@ -34,4 +28,15 @@ for(let i = 0; i < instruments.length; i++) {
     tr.appendChild(qualityCell);
 
     tableBody.appendChild(tr);
+}
+
+function makeNameCell(instrument) {
+    const nameCell = document.createElement('td');
+    const link = document.createElement('a');
+    const searchParams = new URLSearchParams();
+    searchParams.set('name', instrument.name);
+    link.href = './product-detail.html?' + searchParams;
+    link.textContent = instrument.name;
+    nameCell.appendChild(link);
+    return nameCell;
 }
