@@ -4,8 +4,10 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     background-image: url('../assets/clarinet.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -19,7 +21,14 @@ section {
     margin-top: 25px;
 }
 
+h1 {
+    text-shadow:
+        3px 3px 0  rgba(255, 255, 255, .9),
+      -1px -1px 0  rgba(255, 255, 255, .9)
+}
+
 h1, h2 {
+    color: rgb(5, 11, 91);
     font-family: 'Abril Fatface', cursive;
 }
 
@@ -35,9 +44,16 @@ button {
 
 .note-background {
     background-image: url('../assets/notes.png');
-    background-size: 280px 90px;
+    background-size: 280px 100px;
     background-repeat: no-repeat;
-    height: 70px;
+    height: 80px;
+    padding-top: 3px;
     width: 280px;
-    margin: auto;
+    margin: auto; 
+}
+
+button {
+    border-radius: 15px;
+    padding: 7px;
+    cursor: pointer;
 }
