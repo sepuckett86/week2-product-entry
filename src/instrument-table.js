@@ -12,6 +12,7 @@ if(instruments.length !== 0) {
     
         const nameCell = makeCell.makeNameCell(instrument.name);
         const priceCell = makeCell.makeTextCell(instrument.price);
+        priceCell.textContent = '$ ' + priceCell.textContent;
         const familyCell = makeCell.makeTextCell(instrument.family);
         const conditionCell = makeCell.makeTextCell(instrument.condition);
         const qualityCell = makeCell.makeTextCell(instrument.quality);
