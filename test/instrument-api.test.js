@@ -7,17 +7,17 @@ QUnit.module('instrument-api');
 instrumentApi.storage = sessionStorage;
 const testStorage = sessionStorage;
 
-test('round trip of instrument data', assert => {
+test('set multiple instruments and get back the last', assert => {
     testStorage.removeItem('instruments');
     // Arrange
-    const expected = {
-        testing: 'test'
-    };
+    const instrument1 = { name: 'clarinet' };
+    const instrument2 = { name: 'trumpet' };
     // Act
-    instrumentApi.set(expected);
-    const actual = instrumentApi.get();
+    instrumentApi.set(instrument1);
+    instrumentApi.set(instrument2);
+    const actual = instrumentApi.get(instrument2.name);
     // Assert
-    assert.deepEqual(actual, expected);
+    assert.deepEqual(actual, instrument2);
 });
 
 test('return an empty array if there are no instruments in local storage', (assert) => {
