@@ -11,3 +11,8 @@ dt, dd {
     display: inline-block;
     padding: 2%;
 }
+
+main {
+    margin: 2% auto;
+    max-width: 400px;
+}
